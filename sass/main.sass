@@ -49,6 +49,14 @@ body
 			z-index: 10
 			background-color: rgba(0,0,0,0.7)
 
+@keyframes pulse 
+	0% 
+		box-shadow: 0 0 0 0 rgba(223, 142, 122, 0)
+	70% 
+		box-shadow: 0 0 8px 11px rgba(223, 142, 122, 0.4)
+	100% 
+		box-shadow: 0 0 0 0 rgba(223, 142, 122, 0)
+
 .ov-hidden
 	overflow: hidden
 
@@ -79,10 +87,11 @@ body
 		font-size: 18px
 		padding: 20px 40px
 		color: #fff
+		animation: pulse 2s infinite
 		&:hover
+			animation: pulse 0.8s infinite
 			background: transparent
 			color: $orange
-
 
 img
 	max-width: 100%
@@ -260,6 +269,7 @@ img
 
 .video
 	padding-top: 100px
+	padding-bottom: 15px
 	&_title
 		font-size: 42px
 		font-weight: 700
@@ -299,6 +309,9 @@ img
 		display: flex
 		justify-content: center
 		align-items: center
+		&-img
+			img
+				width: auto!important
 	&_title
 		position: absolute
 		padding-top: 80px
@@ -306,6 +319,13 @@ img
 		color: #fff
 		font-weight: 700
 		line-height: 1
+		display: flex
+		align-items: center
+		&-wrapper
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			margin-right: 30px
 		img
 			width: 95px
 	&_buttons
@@ -409,6 +429,7 @@ img
 
 .list
 	padding-top: 20px
+	padding-bottom: 15px
 	&_title
 		display: flex
 		justify-content: center
@@ -528,6 +549,7 @@ img
 
 .auto
 	padding-top: 130px
+	padding-bottom: 15px
 	&_title
 		font-size: 42px
 		line-height: 1
@@ -968,5 +990,56 @@ img
 				// display: none
 				opacity: 0
 
+.popup
+	display: none
+
+.send
+	padding: 40px 30px
+	width: 560px
+	background: #FDF5DF
+	&_wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+	&_logo
+		img
+			width: 150px
+	&_title
+		font-size: 32px
+		font-weight: 600
+		text-align: center
+		line-height: 1.5
+	&_desc
+		text-align: center
+		font-weight: 300
+		font-size: 18px
+		line-height: 1.5
+		display: flex
+		flex-direction: column
+		margin: 20px 0
+	&_inputs
+		width: 100%
+	&_input
+		margin-bottom: 25px
+		width: 100%
+		input
+			border: none
+			border-bottom: 1px solid $text
+			padding-bottom: 8px
+			background: #FDF5DF
+			width: 100%
+	&_button
+		width: 100%
+		.btn
+			width: 100%
+			padding: 15px 0
+	&_bottom
+		font-size: 14px
+		text-align: center
+		margin-top: 15px
+		line-height: 1.55
+		a
+			color: $orange
+			text-decoration: underline
 
 @import media
