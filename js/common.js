@@ -32,5 +32,15 @@ $(document).ready(function () {
         $('.hero_right').appendTo('.hero_left');
     }
 
+    scrollTop = 100
+
+    var el = document.querySelector('.auto_left-img');
+
+    var scrollTop = el.scrollTop;
+
+    el.addEventListener('scroll', function() {
+        scrollTop = scrollTop + el.scrollHeight;
+    });
+
 });
 

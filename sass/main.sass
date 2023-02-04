@@ -316,7 +316,7 @@ img
 		position: absolute
 		padding-top: 80px
 		font-size: 42px
-		color: #fff
+		color: #FCF4DE
 		font-weight: 700
 		line-height: 1
 		display: flex
@@ -508,7 +508,7 @@ img
 			display: flex
 			align-items: center
 			justify-content: center
-			color: #fff
+			color: #FCF4DE
 			font-size: 42px
 			font-weight: 700
 			img
@@ -574,7 +574,7 @@ img
 			align-items: center
 			padding: 20px
 			background-position: center
-			color: #fff
+			color: #FCF4DE
 			line-height: 1.5
 			position: relative
 			img
@@ -586,6 +586,11 @@ img
 		&-img
 			margin-left: -70px
 			margin-top: 0px
+			left: -200px
+			position: relative
+			transition: all .7s ease-out .1s
+			&.started
+				left: 0
 	&_right
 		width: 48%
 		&-title
@@ -674,7 +679,7 @@ img
 			display: flex
 			align-items: center
 			justify-content: center
-			color: #fff
+			color: #FCF4DE
 			font-size: 42px
 			font-weight: 700
 			img
@@ -761,6 +766,7 @@ img
 		color: #fdf5df
 		text-align: center
 		font-size: 42px
+		font-weight: 700
 		line-height: 1.5
 	&_subtitle
 		margin-top: 25px
@@ -929,7 +935,7 @@ img
 	align-items: center
 	background: $orange
 	z-index: 11
-	padding: 15px 20%
+	padding: 15px 15%
 	color: #fff
 	&_items
 		display: flex
